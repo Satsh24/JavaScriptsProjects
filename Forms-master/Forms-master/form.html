@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form</title>
+	<style type="text/css">
+		#boxs{
+			width: 400px;
+			height: 470px;
+			margin: 5px;
+			padding: 25px;
+			border: solid 1px;
+			border-collapse: collapse;
+			border-color: maroon;
+			margin-left: 450px;
+			margin-top: 75px;
+			box-sizing: border-box;
+			border-radius: 10px;
+		}
+
+	</style>
+</head>
+<body>
+<div id="boxs">
+	<h2 style="text-align: center;">Form</h2>
+	<form>
+		<label>FullName:</label>
+		<input type="text" name="Name"><br/><br/>
+		<label>DOB:</label>
+		<input type="date" name="DOB"><br/><br/>
+		<label>Gender:</label><br/>
+		<input type="radio" name="Gender">Male<br/>
+		<input type="radio" name="Gender">Female<br/>
+		<input type="radio" name="Gender">Other<br/><br/>
+		<label>Select a Car:</label>
+		<input list="cars"><datalist id="cars">
+			<option value="Honda"></option>
+			<option value="Toyota"></option>
+			<option value="Kia"></option>
+			<option value="Volkswagen"></option>
+		</datalist><br/><br/>
+		<label>Choose your option/s:</label><br/>
+		<input type="checkbox" name="carType">I need a compact car<br/>
+		<input type="checkbox" name="carType">I need a SUV<br/>
+		<textarea>
+			abc
+		</textarea><br/><br/>
+		<button>Submit</button>
+	</form>
+	</div>
+
+</body>
+</html>
