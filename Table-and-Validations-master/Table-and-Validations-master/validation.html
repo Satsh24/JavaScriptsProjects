@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>validation example</title>
+	<script type="text/javascript">
+		function validation(){	
+			var fname = document.getElementById("FirstName").value;
+			var lname = document.getElementById("LastName").value;
+			var pno = document.getElementById("PhoneNumber").value;
+			if(fname==""){
+				document.getElementById("error").innerHTML = "please enter the first name";
+				document.getElementById("FirstName").focus();
+				return false;
+			}
+			if(lname==""){
+				document.getElementById("error").innerHTML = "please enter the last name";
+				document.getElementById("LastName").focus();
+				return false;
+			}
+			if(pno==""){
+				document.getElementById("error").innerHTML = "please enter the Phone number";
+				document.getElementById("PhoneNumber").focus();
+				return false;
+			}
+			else{
+				document.getElementById("error").innerHTML = "";
+			}
+		}
+
+	</script>
+	<style type="text/css">
+		#error{
+			color: red;
+		}
+	</style>
+</head>
+<body>
+<form>
+	<div>
+		<label>FirstName</label>
+		<input type="text" id="FirstName">
+	</div>
+
+	<div style="padding-top: 10px;">
+		<label>LastName</label>
+		<input type="text" id="LastName">
+	</div>
+
+	<div style="padding-top: 10px;">
+		<label>PhoneNumber</label>
+		<input type="number" id="PhoneNumber">
+	</div>
+
+
+	<div style="padding-top: 10px;">
+		<input type="button" value="submit" onclick="validation()"><br>
+		<span id="error"></span>
+	</div>
+</form>
+</body>
+</html>
